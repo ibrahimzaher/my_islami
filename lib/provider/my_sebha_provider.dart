@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 
 class MySebhaProvider extends ChangeNotifier {
@@ -7,7 +5,7 @@ class MySebhaProvider extends ChangeNotifier {
   double angle = 0;
   List<String> values = [
     'سُبْحَانَ اللَّهِ',
-    'لا حَوْلَ وَلا قُوَّةَ إِلا بِاللَّ',
+    'لا حَوْلَ وَلا قُوَّةَ إِلا بِاللهَّ',
     'الْحَمْدُ للّهِ رَبِّ الْعَالَمِينَ',
     'أستغفر الله',
     'الْلَّهُ أَكْبَرُ',
