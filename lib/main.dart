@@ -7,6 +7,7 @@ import 'package:my_islami/provider/my_bottom_nav_bar_provider.dart';
 import 'package:my_islami/provider/my_hades_provider.dart';
 import 'package:my_islami/provider/my_language_provider.dart';
 import 'package:my_islami/provider/my_quran_tab_provider.dart';
+import 'package:my_islami/provider/my_sebha_provider.dart';
 import 'package:my_islami/provider/my_theme_provider.dart';
 import 'package:my_islami/tabs/hades/hades_details_screen.dart';
 import 'package:my_islami/tabs/quran/quran_details_screen.dart';
@@ -30,6 +31,9 @@ void main() {
         ),
         ChangeNotifierProvider(
           create: (_) => MyHadesProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => MySebhaProvider(),
         ),
       ],
       child: MyApp(),
