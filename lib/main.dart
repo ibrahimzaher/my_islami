@@ -5,7 +5,9 @@ import 'package:my_islami/home_screen.dart';
 import 'package:my_islami/my_theme.dart';
 import 'package:my_islami/provider/my_bottom_nav_bar_provider.dart';
 import 'package:my_islami/provider/my_language_provider.dart';
+import 'package:my_islami/provider/my_quran_tab_provider.dart';
 import 'package:my_islami/provider/my_theme_provider.dart';
+import 'package:my_islami/tabs/quran/quran_details_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -20,6 +22,9 @@ void main() {
         ),
         ChangeNotifierProvider(
           create: (_) => MyBottomNavBarProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => MyQuranTabProvider(),
         ),
       ],
       child: MyApp(),
@@ -36,6 +41,7 @@ class MyApp extends StatelessWidget {
       initialRoute: HomeScreen.routeName,
       routes: {
         HomeScreen.routeName: (_) => HomeScreen(),
+        QuranDetailsScreen.routeName: (_) => QuranDetailsScreen(),
       },
       debugShowCheckedModeBanner: false,
       themeMode: context.watch<MyThemeProvider>().mode,
