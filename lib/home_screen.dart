@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:my_islami/provider/my_bottom_nav_bar_provider.dart';
+import 'package:my_islami/provider/my_hades_provider.dart';
 import 'package:my_islami/provider/my_theme_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -9,6 +10,9 @@ class HomeScreen extends StatelessWidget {
   static const String routeName = 'home_screen';
   @override
   Widget build(BuildContext context) {
+    if (context.watch<MyHadesProvider>().titles.isEmpty) {
+      context.read<MyHadesProvider>().readFile();
+    }
     return Stack(
       children: [
         Consumer<MyThemeProvider>(
