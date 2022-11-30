@@ -5,6 +5,7 @@ class MyTheme {
   static Color whiteColor = Color(0xffF8F8F8);
   static Color primaryColor = Color(0xffB7935F);
   static Color primaryDarkColor = Color(0xff141A2E);
+  static Color goldColor = Color(0xffFACC1D);
   static ThemeData light = ThemeData(
     primaryColor: primaryColor,
     scaffoldBackgroundColor: Colors.transparent,
@@ -48,7 +49,7 @@ class MyTheme {
       ),
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      selectedItemColor: blackColor,
+      selectedItemColor: goldColor,
       unselectedItemColor: whiteColor,
       elevation: 0,
     ),
