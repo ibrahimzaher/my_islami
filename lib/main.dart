@@ -1,8 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:my_islami/home_screen.dart';
+import 'package:my_islami/my_theme.dart';
+import 'package:my_islami/provider/my_bottom_nav_bar_provider.dart';
+import 'package:my_islami/provider/my_language_provider.dart';
+import 'package:my_islami/provider/my_theme_provider.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (_) => MyThemeProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => MyLanguageProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => MyBottomNavBarProvider(),
+        ),
+      ],
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -16,8 +38,20 @@ class MyApp extends StatelessWidget {
         HomeScreen.routeName: (_) => HomeScreen(),
       },
       debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.light,
-      theme: ThemeData(),
+      themeMode: context.watch<MyThemeProvider>().mode,
+      theme: MyTheme.light,
+      darkTheme: MyTheme.dark,
+      localizationsDelegates: [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale('en', ''),
+        Locale('ar', ''),
+      ],
+      locale: Locale(context.watch<MyLanguageProvider>().language),
     );
   }
 }
