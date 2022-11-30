@@ -23,6 +23,16 @@ class MyTheme {
         color: blackColor,
         fontWeight: FontWeight.bold,
       ),
+      subtitle1: TextStyle(
+        fontSize: 25,
+        color: blackColor,
+        fontWeight: FontWeight.w600,
+      ),
+      subtitle2: TextStyle(
+        fontSize: 25,
+        color: blackColor,
+        fontWeight: FontWeight.bold,
+      ),
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       selectedItemColor: blackColor,
@@ -44,6 +54,16 @@ class MyTheme {
     primaryTextTheme: TextTheme(
       headline1: TextStyle(
         fontSize: 30,
+        color: whiteColor,
+        fontWeight: FontWeight.bold,
+      ),
+      subtitle1: TextStyle(
+        fontSize: 25,
+        color: whiteColor,
+        fontWeight: FontWeight.w600,
+      ),
+      subtitle2: TextStyle(
+        fontSize: 25,
         color: whiteColor,
         fontWeight: FontWeight.bold,
       ),
