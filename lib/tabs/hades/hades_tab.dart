@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:my_islami/component/my_divider.dart';
 import 'package:my_islami/component/reusable_tab.dart';
 import 'package:my_islami/my_theme.dart';
@@ -33,6 +34,7 @@ class HadesTab extends StatelessWidget {
           itemCount: provider.titles.length,
         ),
       ),
+      title: AppLocalizations.of(context)!.hadeth_name,
     );
   }
 }
