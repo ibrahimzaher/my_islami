@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:my_islami/component/my_divider.dart';
 import 'package:my_islami/component/reusable_tab.dart';
 import 'package:my_islami/my_theme.dart';
@@ -28,6 +29,7 @@ class QuranTab extends StatelessWidget {
         ),
         itemCount: context.read<MyQuranTabProvider>().titles.length,
       ),
+      title: AppLocalizations.of(context)!.sura_name,
     );
   }
 }

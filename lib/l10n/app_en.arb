@@ -5,5 +5,12 @@
     "radio":"Radio",
     "sebha":"Sebha",
     "settings":"Settings",
-    "sura_name":"Sura Name"
+    "sura_name":"Sura Name",
+    "hadeth_name":"AlAhadeth",
+    "language":"Language",
+    "english":"English",
+    "arabic":"Arabic",
+    "theming":"Theming",
+    "dark":"Dark",
+    "light":"Light"
 }
